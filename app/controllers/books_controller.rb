@@ -50,7 +50,7 @@ end
 #Book was successfully updated.
 #Book was successfully destroyed.
 
-#2/19午後12時40分時点未実装機能
+#2/19午後15時45分時点未実装機能
 #css
 #空白許さないマン
 
