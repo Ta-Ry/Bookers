@@ -13,10 +13,13 @@ class BooksController < ApplicationController
   end
 
   def create
-  	book = Book.new(book_params)
-  	if book.save
+  	@book = Book.new(book_params)
+  	if @book.save
   		flash[:notice] = "Book was successfully created."
-  	    redirect_to book_path(book)
+  	    redirect_to book_path(@book)
+  	else
+  		@books = Book.all
+  		render action: :index
   	end
   end
 
@@ -46,12 +49,6 @@ end
 
 #確認用http
 #http://localhost:3000/books/
-#Book was successfully created.
-#Book was successfully updated.
-#Book was successfully destroyed.
 
-#2/19午後15時45分時点未実装機能
+#2/19午後16時35分時点未実装機能
 #css
-#空白時エラー
-
-
