@@ -49,6 +49,3 @@ end
 
 #確認用http
 #http://localhost:3000/books/
-
-#2/19午後16時35分時点未実装機能
-#css

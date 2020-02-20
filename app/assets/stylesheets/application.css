@@ -61,7 +61,7 @@ td
     padding-right: 5px;
 }
 
-.error-box
+#error-explanation
 {
 	width: 450px;
     border: 2px solid red;
@@ -70,7 +70,7 @@ td
     margin-bottom: 20px;
     background-color: #f0f0f0;
 }
-.error-box h2
+#error-explanation h2
 {
 	text-align: left;
     font-weight: bold;
@@ -81,7 +81,7 @@ td
     background-color: #c00;
     color: #fff;
 }
-.error-box ul li
+#error-explanation ul li
 {
 	font-size: 12px;
     list-style: square;
