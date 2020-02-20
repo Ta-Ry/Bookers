@@ -1,6 +1,7 @@
+<body>
 <% if flash[:notice] %>
-<div class="flash">
-    <%= flash[:notice] %>
+<div>
+    <p class="flash"><%= flash[:notice] %></p>
 </div>
 <% end %>
 <h1>Books</h1>
@@ -28,24 +29,29 @@
 
 <h2>New book</h2>
 
+
 <%= form_for(@book) do |f| %>
 <% if @book.errors.any? %>
-    <h2><%= @book.errors.count %>件のエラーがあります。</h2>
+  <div class="error-box">
+    <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
         <ul>
         <% @book.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
+  </div>
 <% end %>
+
   <div class="field">
-    <%= f.label :Title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :Title %>
+    <%= f.text_field :title, class: "book_Title" %>
   </div>
   <div class="field">
-    <%= f.label :Body %><br>
-    <%= f.text_area :body %>
+    <%= f.label :Body %>
+    <%= f.text_area :body, class: "book_Body" %>
   </div>
   <div class="actions">
     <%= f.submit "Create Book" %>
   </div>
 <% end %>
+</body>
